@@ -18,6 +18,12 @@ app.get('/products/:productId', (req, res) => {
     res.send(`GET Products: ${productId}`)
 })
 
+// curl -X GET http://localhost:3000/products/8719-small-red
+app.get('/products/:productId-:productSize-:productColor', (req, res) => {
+    const {productId, productSize, productColor} = req.params
+    res.send(`GET Products: ${productId}, ${productSize}, ${productColor}`)
+})
+
 app.listen(3000, () => {
     console.log('🚀 Server listening on port 3000')
 })
