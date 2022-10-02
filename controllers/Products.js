@@ -6,7 +6,9 @@ const index = (req, res) => {
 }
 
 const form = (req, res) => {
-    
+    res.json({
+        error: "Not yet implemented"
+    })
 }
 
 const show = (req, res) => {
@@ -15,7 +17,7 @@ const show = (req, res) => {
 }
 
 const create = (req, res) => {
-    const product = Product.create(req.body)
+    const product = Products.create(req.body)
     res.json(product)
 }
 
