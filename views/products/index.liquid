@@ -1,0 +1,17 @@
+{% layout "layout.liquid" %}
+
+
+{% block content %}
+<div>
+    <h2>All Products</h2>
+    <ul>
+    {% for product in products %}
+        <li>
+            {{ product.name }} - 
+            <a href="/products/{{ product.id }}">Edit</a>
+            <a href="/products/{{ product.id }}/delete">Delete</a>
+        </li>
+    {% endfor %}
+    </ul>
+</div>
+{% endblock %}
