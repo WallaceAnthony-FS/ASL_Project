@@ -1,4 +1,9 @@
 <form method="POST" action="/products/{% if product.id %}{{product.id}}{% endif %}">
+{% if product.id %}
+    <h2>Edit</h2>
+{% else %}
+    <h2>Create</h2>
+{% endif %}
     <div>
         <label>Name: 
             <input type="text" name="name" value="{{product.name}}">
