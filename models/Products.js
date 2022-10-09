@@ -2,7 +2,8 @@ let products = [
     {
         id: 1,
         slug: "nike-shoe",
-        name: "Nike Shoe"
+        name: "Nike Shoe",
+        price: 200
     }
 ]
 

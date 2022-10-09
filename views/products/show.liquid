@@ -1,0 +1,23 @@
+{% layout "layout.liquid" %}
+
+
+{% block content %}
+<h2>About {{product.name}}</h2>
+
+<div>
+    <p>
+        <span>Id:</span> {{product.id}}
+    </p>
+    <p>
+        <span>Name:</span> {{product.name}}
+    </p>
+    <p>
+        <span>Price:</span> ${{product.price}}
+    </p>
+</div>
+<div>
+    <a href="/products/{{ product.id }}/edit">Edit</a>
+    <a href="/products/{{ product.id }}/delete">Delete</a>
+</div>
+
+{% endblock %}

@@ -1,0 +1,9 @@
+{% layout "layout.liquid" %}
+
+
+{% block content %}
+<div>
+    {{product.name}}
+    {% render "products/_form.liquid", product: product  %}
+</div>
+{% endblock %}

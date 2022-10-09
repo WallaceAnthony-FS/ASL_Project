@@ -1,6 +1,6 @@
 const express = require("express")
 
-const app = express()
+const app = require("liquid-express-views")(express())
 app.use(express.urlencoded({ extended: false }))
 
 const productRouter = require("./routes/Products")
