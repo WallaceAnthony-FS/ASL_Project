@@ -8,7 +8,7 @@
     <ul>
     {% for image in images %}
         <li>
-            {{ image.title }} - 
+            Image #{{ image.id }} 
             <a href="/images/{{ image.id }}">View</a>
             <a href="/images/{{ image.id }}/delete">Delete</a>
         </li>
