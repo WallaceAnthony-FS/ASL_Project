@@ -15,6 +15,16 @@
         </label>
     </div>
     <div>
+        <label>
+            Product:
+            <select name="productId">
+                {% for product in products %}
+                    <option value="{{product.id}}">{{product.title}}</option>
+                {% endfor %}
+            </select>
+        </label>
+    </div>
+    <div>
         <input type="submit" value="Submit">
     </div>
 </form>
