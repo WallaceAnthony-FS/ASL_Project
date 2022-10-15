@@ -1,36 +1,40 @@
-const Products = require("../models/Products")
+const { Product } = require("../models/")
 
-const index = (req, res) => {
-    const products = Products.all()
+const index = async (req, res) => {
+    const products = await Product.findAll()
     res.render("products/index.liquid", {products})
 }
 
-const form = (req, res) => {
+const form = async (req, res) => {
     if(req.params.id){
-        const product = Products.find(req.params.id)
+        const product = await Product.findByPk(req.params.id)
         res.render("products/edit.liquid", { product })
     } else {
         res.render("products/create.liquid")
     }
 }
 
-const show = (req, res) => {
-    const product = Products.find(req.params.id)
-    res.render("products/show.liquid", {product})
+const show = async (req, res) => {
+    const product = await Product.findByPk(req.params.id)
+    res.render("products/show.liquid", { product })
 }
 
-const create = (req, res) => {
-    const product = Products.create(req.body)
+const create = async (req, res) => {
+    const product = await Product.create(req.body)
     res.redirect("/products/" + product.id)
 }
 
-const update = (req, res) => {
-    const product = Products.update(req.params.id, req.body)
+const update = async (req, res) => {
+    await Product.update(req.body, {
+        where: {
+            id: req.params.id
+        }
+    })
     res.redirect("/products/" + req.params.id)
 }
 
-const remove = (req, res) => {
-    const products = Products.remove(req.params.id)
+const remove = async (req, res) => {
+    await Product.destroy({where: { id: req.params.id }})
     res.redirect("/products/")
 }
 

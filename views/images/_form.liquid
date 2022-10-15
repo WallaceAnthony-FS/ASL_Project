@@ -1,0 +1,19 @@
+<form method="POST" action="/images/{% if image.id %}{{image.id}}{% endif %}">
+{% if image.id %}
+    <h2>Edit</h2>
+{% else %}
+    <h2>Create</h2>
+{% endif %}
+    <div>
+        <label>Variant: 
+            <select name="variantId">
+                {% for variant in variants %}
+                    <option value="{{ variant.id }}" {% if variant.id == image.variantId %} selected {% endif %}>{{ variant.title }}</option>
+                {% endfor %}
+            </select>
+        </label>
+    </div>
+    <div>
+        <input type="submit" value="Submit">
+    </div>
+</form>

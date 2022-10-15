@@ -5,13 +5,31 @@
     <h2>Create</h2>
 {% endif %}
     <div>
-        <label>Name: 
-            <input type="text" name="name" value="{{product.name}}">
+        <label>Title: 
+            <input type="text" name="title" value="{{product.title}}" required>
+        </label>
+    </div>
+    <div>
+        <label>Slug: 
+            <input type="text" name="slug" value="{{product.slug}}" required>
+        </label>
+    </div>
+    <div>
+        <label>Description: 
+            <textarea type="text" name="description" required>{{product.description}}</textarea>
         </label>
     </div>
     <div>
         <label>Price: 
-            <input type="number" name="price" value="{{product.price}}" min="0" step="0.01" />
+            <input type="number" name="price" value="{{product.price}}" min="0" step="0.01" required />
+        </label>
+    </div>
+    <div>
+        <label>Published: 
+            <select id="isPublished">
+                <option value="true">Yes</option>
+                <option value="false">No</option>
+            </select>
         </label>
     </div>
     <div>

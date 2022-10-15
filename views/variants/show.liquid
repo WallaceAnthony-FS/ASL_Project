@@ -1,0 +1,32 @@
+{% layout "layout.liquid" %}
+
+
+{% block content %}
+<h2>About {{variant.name}}</h2>
+
+<div>
+    <p>
+        <span>Id:</span> {{variant.id}}
+    </p>
+    <p>
+        <span>Title:</span> {{variant.title}}
+    </p>
+    <p>
+        <span>Slug:</span> {{variant.slug}}
+    </p>
+    <p>
+        <span>Description:</span> {{variant.description}}
+    </p>
+    <p>
+        <span>Price:</span> ${{variant.price}}
+    </p>
+    <p>
+        <span>Product:</span>{{product.title}}
+    </p>
+</div>
+<div>
+    <a href="/variants/{{ variant.id }}/edit">Edit</a>
+    <a href="/variants/{{ variant.id }}/delete">Delete</a>
+</div>
+
+{% endblock %}

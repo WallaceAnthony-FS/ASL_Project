@@ -1,0 +1,9 @@
+{% layout "layout.liquid" %}
+
+
+{% block content %}
+<div>
+    {{image.title}}
+    {% render "images/_form.liquid", variants: variants  %}
+</div>
+{% endblock %}

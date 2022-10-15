@@ -1,0 +1,18 @@
+{% layout "layout.liquid" %}
+
+
+{% block content %}
+<div>
+    <h2>All Variants</h2>
+    <a href="/variants/new">Create</a>
+    <ul>
+    {% for variant in variants %}
+        <li>
+            {{ variant.title }} - 
+            <a href="/variants/{{ variant.id }}">View</a>
+            <a href="/variants/{{ variant.id }}/delete">Delete</a>
+        </li>
+    {% endfor %}
+    </ul>
+</div>
+{% endblock %}
