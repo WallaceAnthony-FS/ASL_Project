@@ -19,7 +19,7 @@
             Product:
             <select name="productId">
                 {% for product in products %}
-                    <option value="{{product.id}}">{{product.title}}</option>
+                    <option value="{{product.id}}" {% if product.id == variant.productId %} selected {% endif %}>{{product.title}}</option>
                 {% endfor %}
             </select>
         </label>

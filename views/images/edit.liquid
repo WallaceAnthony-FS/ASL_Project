@@ -3,7 +3,7 @@
 
 {% block content %}
 <div>
-    {{product.title}}
-    {% render "images/_form.liquid", image: image  %}
+    {{image.title}}
+    {% render "images/_form.liquid", variants: variants  %}
 </div>
 {% endblock %}
