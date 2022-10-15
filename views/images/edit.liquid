@@ -1,0 +1,9 @@
+{% layout "layout.liquid" %}
+
+
+{% block content %}
+<div>
+    {{product.title}}
+    {% render "images/_form.liquid", image: image  %}
+</div>
+{% endblock %}

@@ -1,0 +1,20 @@
+<form method="POST" action="/images/{% if image.id %}{{image.id}}{% endif %}">
+{% if image.id %}
+    <h2>Edit</h2>
+{% else %}
+    <h2>Create</h2>
+{% endif %}
+    <div>
+        <label>Name: 
+            <input type="text" name="title" value="{{image.title}}">
+        </label>
+    </div>
+    <div>
+        <label>Price: 
+            <input type="number" name="price" value="{{image.price}}" min="0" step="0.01" />
+        </label>
+    </div>
+    <div>
+        <input type="submit" value="Submit">
+    </div>
+</form>

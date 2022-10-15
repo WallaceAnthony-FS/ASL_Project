@@ -1,0 +1,17 @@
+{% layout "layout.liquid" %}
+
+
+{% block content %}
+<div>
+    <h2>All Products</h2>
+    <ul>
+    {% for image in images %}
+        <li>
+            {{ image.title }} - 
+            <a href="/images/{{ image.id }}">View</a>
+            <a href="/images/{{ image.id }}/delete">Delete</a>
+        </li>
+    {% endfor %}
+    </ul>
+</div>
+{% endblock %}
