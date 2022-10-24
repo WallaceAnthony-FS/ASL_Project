@@ -1,4 +1,4 @@
-<form method="POST" action="/images/{% if image.id %}{{image.id}}{% endif %}">
+<form enctype="multipart/form-data" method="POST" action="/images/{% if image.id %}{{image.id}}{% endif %}">
 {% if image.id %}
     <h2>Edit</h2>
 {% else %}

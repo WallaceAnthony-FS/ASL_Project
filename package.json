@@ -12,6 +12,7 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.18.1",
+    "express-fileupload": "^1.4.0",
     "liquid-express-views": "^1.0.8",
     "mysql2": "^2.3.3",
     "sequelize": "^6.25.1"
